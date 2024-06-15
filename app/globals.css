@@ -1,251 +1,76 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
   }
-}
-
-/* * FONT FAMILY */
-
-/* Display 2XL */
-.display-2xl-regular {
-  @apply text-7xl font-normal leading-[90px] tracking-[-1.44px];
-}
-
-.display-2xl-medium {
-  @apply text-7xl font-medium leading-[90px] tracking-[-1.44px];
-}
-
-.display-2xl-semibold {
-  @apply text-7xl font-semibold leading-[90px] tracking-[-1.44px];
-}
-
-.display-2xl-bold {
-  @apply text-7xl font-bold leading-[90px] tracking-[-1.44px];
-}
-
-/* Display XL */
-.display-xl-regular {
-  @apply text-6xl font-normal leading-[72px] tracking-[-1.2px];
-}
-
-.display-xl-medium {
-  @apply text-6xl font-medium leading-[72px] tracking-[-1.2px];
-}
-
-.display-xl-semibold {
-  @apply text-6xl font-semibold leading-[72px] tracking-[-1.2px];
-}
-
-.display-xl-bold {
-  @apply text-6xl font-bold leading-[72px] tracking-[-1.2px];
-}
-
-/* Display LG */
-.display-lg-regular {
-  @apply text-5xl font-normal leading-[60px] tracking-[-0.96px];
-}
-
-.display-lg-medium {
-  @apply text-5xl font-medium leading-[60px] tracking-[-0.96px];
-}
-
-.display-lg-semibold {
-  @apply text-5xl font-semibold leading-[60px] tracking-[-0.96px];
-}
-
-.display-lg-bold {
-  @apply text-5xl font-bold leading-[60px] tracking-[-0.96px];
-}
-
-/* Display MD */
-.display-md-regular {
-  @apply text-4xl font-normal leading-[44px] tracking-[-0.72px];
-}
-
-.display-md-medium {
-  @apply text-4xl font-medium leading-[44px] tracking-[-0.72px];
-}
-
-.display-md-semibold {
-  @apply text-4xl font-semibold leading-[44px] tracking-[-0.72px];
-}
-
-.display-md-bold {
-  @apply text-4xl font-bold leading-[44px] tracking-[-0.72px];
-}
-
-/* Display SM */
-.display-sm-regular {
-  @apply text-3xl font-normal leading-[38px];
-}
-
-.display-sm-medium {
-  @apply text-3xl font-medium leading-[38px];
-}
-
-.display-sm-semibold {
-  @apply text-3xl font-semibold leading-[38px];
-}
-
-.display-sm-bold {
-  @apply text-3xl font-bold leading-[38px];
-}
-
-/* Display XS */
-.display-xs-regular {
-  @apply text-2xl font-normal leading-8;
-}
-
-.display-xs-medium {
-  @apply text-2xl font-medium leading-8;
-}
-
-.display-xs-semibold {
-  @apply text-2xl font-semibold leading-8;
-}
-
-.display-xs-bold {
-  @apply text-2xl font-bold leading-8;
-}
-
-/* Text XL */
-.text-xl-regular {
-  @apply text-xl font-normal leading-[30px];
-}
-
-.text-xl-medium {
-  @apply text-xl font-medium leading-[30px];
-}
-
-.text-xl-semibold {
-  @apply text-xl font-semibold leading-[30px];
-}
-
-.text-xl-bold {
-  @apply text-xl font-bold leading-[30px];
-}
-
-/* Text LG */
-.text-lg-regular {
-  @apply text-lg font-normal leading-7;
-}
-
-.text-lg-medium {
-  @apply text-lg font-medium leading-7;
-}
-
-.text-lg-semibold {
-  @apply text-lg font-semibold leading-7;
-}
-
-.text-lg-bold {
-  @apply text-lg font-bold leading-7;
-}
-
-/* Text MD */
-.text-md-regular {
-  @apply text-base font-normal leading-6;
-}
-
-.text-md-medium {
-  @apply text-base font-medium leading-6;
-}
-
-.text-md-semibold {
-  @apply text-base font-semibold leading-6;
-}
-
-.text-md-bold {
-  @apply text-base font-bold leading-6;
-}
-
-/* Text SM */
-.text-sm-regular {
-  @apply text-sm font-normal leading-5;
-}
-
-.text-sm-medium {
-  @apply text-sm font-medium leading-5;
-}
-
-.text-sm-semibold {
-  @apply text-sm font-semibold leading-5;
-}
-
-.text-sm-bold {
-  @apply text-sm font-bold leading-5;
-}
-
-/* Text SM */
-.text-xs-regular {
-  @apply text-xs font-normal leading-[18px];
-}
-
-.text-xs-medium {
-  @apply text-xs font-medium leading-[18px];
-}
-
-.text-xs-semibold {
-  @apply text-xs font-semibold leading-[18px];
-}
-
-.text-xs-bold {
-  @apply text-xs font-bold leading-[18px];
-}
-
-/* * SHADOW  */
-.shadow-xs {
-  @apply shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)];
-}
-
-.shadow-sm {
-  @apply shadow-[0px_1px_3px_0px_rgba(16,24,40,0.10),0px_1px_2px_0px_rgba(16,24,40,0.06)];
-}
-
-.shadow-md {
-  @apply shadow-[0px_4px_8px_-2px_rgba(16,24,40,0.10),0px_2px_4px_-2px_rgba(16,24,40,0.06)];
-}
-
-.shadow-lg {
-  @apply shadow-[0px_12px_16px_-4px_rgba(16,24,40,0.08),0px_4px_6px_-2px_rgba(16,24,40,0.03)];
-}
-
-.shadow-xl {
-  @apply shadow-[0px_20px_24px_-4px_rgba(16,24,40,0.08),0px_8px_8px_-4px_rgba(16,24,40,0.03)]; 
-}
-
-.shadow-2xl {
-  @apply shadow-[0px_24px_48px_-12px_rgba(16,24,40,0.18)];
-}
-
-.shadow-3xl {
-  @apply shadow-[0px_32px_64px_-12px_rgba(16,24,40,0.14)];
-}

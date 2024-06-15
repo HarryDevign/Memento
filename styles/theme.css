@@ -60,3 +60,13 @@
 .text-brand-tertiary-alt {
     @apply text-brand-600 dark:text-grayDark-50;
 }
+
+/* * BORDER */
+.border-primary {
+    @apply text-grayLight-300 dark:text-grayDark-700; 
+}
+
+.border-secondary {
+    @apply text-grayLight-200 dark:text-grayDark-800; 
+}
+
