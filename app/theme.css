@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* * NEUTRAL TEXT */
+.text-primary {
+    @apply text-grayLight-900 dark:text-grayDark-50;
+}
+
+.text-secondary {
+    @apply text-grayLight-700 dark:text-grayDark-300;
+}
+
+.text-secondary:hover {
+    @apply text-grayLight-800 dark:text-grayDark-200;
+}
+
+.text-tertiary {
+    @apply text-grayLight-600 dark:text-grayDark-400;
+}
+
+.text-tertiary:hover {
+    @apply text-grayLight-700 dark:text-grayDark-300;
+}
+
+.text-disabled, .text-placeholder {
+    @apply text-grayLight-500 dark:text-grayDark-500;
+}
+
+.text-placeholder-subtle {
+    @apply text-grayLight-300 dark:text-grayDark-700;
+}
+
+/* * BRAND TEXT */
+.text-primary-on-brand {
+    @apply text-white dark:text-grayDark-50;
+}
+
+.text-secondary-on-brand {
+    @apply text-brand-200 dark:text-grayDark-300;
+}
+
+.text-tertiary-on-brand {
+    @apply text-brand-200 dark:text-grayDark-400;
+}
+
+.text-brand-primary {
+    @apply text-brand-900 dark:text-grayDark-50;
+}
+
+.text-brand-secondary {
+    @apply text-brand-700 dark:text-grayDark-300;
+}
+
+.text-brand-tertiary {
+    @apply text-brand-600 dark:text-grayDark-400;
+}
+
+.text-brand-tertiary-alt {
+    @apply text-brand-600 dark:text-grayDark-50;
+}
