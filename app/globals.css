@@ -1,76 +1,427 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
+@import url("../styles/theme.css");
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
+body {
+  line-height: 1;
+}
 
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
+ol,
+ul {
+  list-style: none;
+}
 
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
+blockquote,
+q {
+  quotes: none;
+}
 
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
 
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 
-      --radius: 0.5rem;
-    }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
+}
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+  .primary-gradient {
+    background: linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%);
+  }
+  .active-theme {
+    filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg)
+      brightness(104%) contrast(106%) !important;
+  }
+
+  /* * FONT FAMILY */
+
+/* Display 2XL */
+.display-2xl-regular {
+  @apply text-7xl font-normal leading-[90px] tracking-[-1.44px];
+}
+
+.display-2xl-medium {
+  @apply text-7xl font-medium leading-[90px] tracking-[-1.44px];
+}
+
+.display-2xl-semibold {
+  @apply text-7xl font-semibold leading-[90px] tracking-[-1.44px];
+}
+
+.display-2xl-bold {
+  @apply text-7xl font-bold leading-[90px] tracking-[-1.44px];
+}
+
+/* Display XL */
+.display-xl-regular {
+  @apply text-6xl font-normal leading-[72px] tracking-[-1.2px];
+}
+
+.display-xl-medium {
+  @apply text-6xl font-medium leading-[72px] tracking-[-1.2px];
+}
+
+.display-xl-semibold {
+  @apply text-6xl font-semibold leading-[72px] tracking-[-1.2px];
+}
+
+.display-xl-bold {
+  @apply text-6xl font-bold leading-[72px] tracking-[-1.2px];
+}
+
+/* Display LG */
+.display-lg-regular {
+  @apply text-5xl font-normal leading-[60px] tracking-[-0.96px];
+}
+
+.display-lg-medium {
+  @apply text-5xl font-medium leading-[60px] tracking-[-0.96px];
+}
+
+.display-lg-semibold {
+  @apply text-5xl font-semibold leading-[60px] tracking-[-0.96px];
+}
+
+.display-lg-bold {
+  @apply text-5xl font-bold leading-[60px] tracking-[-0.96px];
+}
+
+/* Display MD */
+.display-md-regular {
+  @apply text-4xl font-normal leading-[44px] tracking-[-0.72px];
+}
+
+.display-md-medium {
+  @apply text-4xl font-medium leading-[44px] tracking-[-0.72px];
+}
+
+.display-md-semibold {
+  @apply text-4xl font-semibold leading-[44px] tracking-[-0.72px];
+}
+
+.display-md-bold {
+  @apply text-4xl font-bold leading-[44px] tracking-[-0.72px];
+}
+
+/* Display SM */
+.display-sm-regular {
+  @apply text-3xl font-normal leading-[38px];
+}
+
+.display-sm-medium {
+  @apply text-3xl font-medium leading-[38px];
+}
+
+.display-sm-semibold {
+  @apply text-3xl font-semibold leading-[38px];
+}
+
+.display-sm-bold {
+  @apply text-3xl font-bold leading-[38px];
+}
+
+/* Display XS */
+.display-xs-regular {
+  @apply text-2xl font-normal leading-8;
+}
+
+.display-xs-medium {
+  @apply text-2xl font-medium leading-8;
+}
+
+.display-xs-semibold {
+  @apply text-2xl font-semibold leading-8;
+}
+
+.display-xs-bold {
+  @apply text-2xl font-bold leading-8;
+}
+
+/* Text XL */
+.tx-xl-regular {
+  @apply text-xl font-normal leading-[30px];
+}
+
+.tx-xl-medium {
+  @apply text-xl font-medium leading-[30px];
+}
+
+.tx-xl-semibold {
+  @apply text-xl font-semibold leading-[30px];
+}
+
+.tx-xl-bold {
+  @apply text-xl font-bold leading-[30px];
+}
+
+/* Text LG */
+.tx-lg-regular {
+  @apply text-lg font-normal leading-7;
+}
+
+.tx-lg-medium {
+  @apply text-lg font-medium leading-7;
+}
+
+.tx-lg-semibold {
+  @apply text-lg font-semibold leading-7;
+}
+
+.tx-lg-bold {
+  @apply text-lg font-bold leading-7;
+}
+
+/* Text MD */
+.tx-md-regular {
+  @apply text-base font-normal leading-6;
+}
+
+.tx-md-medium {
+  @apply text-base font-medium leading-6;
+}
+
+.tx-md-semibold {
+  @apply text-base font-semibold leading-6;
+}
+
+.tx-md-bold {
+  @apply text-base font-bold leading-6;
+}
+
+/* Text SM */
+.tx-sm-regular {
+  @apply text-sm font-normal leading-5;
+}
+
+.tx-sm-medium {
+  @apply text-sm font-medium leading-5;
+}
+
+.tx-sm-semibold {
+  @apply text-sm font-semibold leading-5;
+}
+
+.tx-sm-bold {
+  @apply text-sm font-bold leading-5;
+}
+
+/* Text SM */
+.tx-xs-regular {
+  @apply text-xs font-normal leading-[18px];
+}
+
+.tx-xs-medium {
+  @apply text-xs font-medium leading-[18px];
+}
+
+.tx-xs-semibold {
+  @apply text-xs font-semibold leading-[18px];
+}
+
+.tx-xs-bold {
+  @apply text-xs font-bold leading-[18px];
+}
+
+}
+

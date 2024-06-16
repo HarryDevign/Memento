@@ -2,71 +2,220 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* * NEUTRAL TEXT */
-.text-primary {
-    @apply text-grayLight-900 dark:text-grayDark-50;
+.theme-text-primary {
+  @apply text-grayLight-900 dark:text-grayDark-50;
 }
 
-.text-secondary {
-    @apply text-grayLight-700 dark:text-grayDark-300;
+.theme-text-secondary {
+  @apply text-grayLight-700 dark:text-grayDark-300;
 }
 
-.text-secondary:hover {
-    @apply text-grayLight-800 dark:text-grayDark-200;
+.theme-text-secondary:hover {
+  @apply text-grayLight-800 dark:text-grayDark-200;
 }
 
-.text-tertiary {
-    @apply text-grayLight-600 dark:text-grayDark-400;
+.theme-text-tertiary {
+  @apply text-grayLight-600 dark:text-grayDark-400;
 }
 
-.text-tertiary:hover {
-    @apply text-grayLight-700 dark:text-grayDark-300;
+.theme-text-tertiary:hover {
+  @apply text-grayLight-700 dark:text-grayDark-300;
 }
 
-.text-disabled, .text-placeholder {
-    @apply text-grayLight-500 dark:text-grayDark-500;
+.theme-text-disabled,
+.theme-text-placeholder {
+  @apply text-grayLight-500 dark:text-grayDark-500;
 }
 
-.text-placeholder-subtle {
-    @apply text-grayLight-300 dark:text-grayDark-700;
+.theme-text-placeholder-subtle {
+  @apply text-grayLight-300 dark:text-grayDark-700;
 }
 
 /* * BRAND TEXT */
-.text-primary-on-brand {
-    @apply text-white dark:text-grayDark-50;
+.theme-text-primary-on-brand {
+  @apply text-white dark:text-grayDark-50;
 }
 
-.text-secondary-on-brand {
-    @apply text-brand-200 dark:text-grayDark-300;
+.theme-text-secondary-on-brand {
+  @apply text-brand-200 dark:text-grayDark-300;
 }
 
-.text-tertiary-on-brand {
-    @apply text-brand-200 dark:text-grayDark-400;
+.theme-text-tertiary-on-brand {
+  @apply text-brand-200 dark:text-grayDark-400;
 }
 
-.text-brand-primary {
-    @apply text-brand-900 dark:text-grayDark-50;
+.theme-text-brand-primary {
+  @apply text-brand-900 dark:text-grayDark-50;
 }
 
-.text-brand-secondary {
-    @apply text-brand-700 dark:text-grayDark-300;
+.theme-text-brand-secondary {
+  @apply text-brand-700 dark:text-grayDark-300;
 }
 
-.text-brand-tertiary {
-    @apply text-brand-600 dark:text-grayDark-400;
+.theme-text-brand-tertiary {
+  @apply text-brand-600 dark:text-grayDark-400;
 }
 
-.text-brand-tertiary-alt {
-    @apply text-brand-600 dark:text-grayDark-50;
+.theme-text-brand-tertiary-alt {
+  @apply text-brand-600 dark:text-grayDark-50;
 }
 
 /* * BORDER */
-.border-primary {
-    @apply text-grayLight-300 dark:text-grayDark-700; 
+.theme-border-primary {
+  @apply border-grayLight-300 dark:border-grayDark-700;
 }
 
-.border-secondary {
-    @apply text-grayLight-200 dark:text-grayDark-800; 
+.theme-border-secondary {
+  @apply border-grayLight-200 dark:border-grayDark-800;
 }
 
+.theme-border-tertiary {
+  @apply border-grayLight-100 dark:border-grayDark-800;
+}
+
+.theme-border-disabled {
+  @apply border-grayLight-300 dark:border-grayDark-700;
+}
+
+.theme-border-disabled-subtle {
+  @apply border-grayLight-200 dark:border-grayDark-800;
+}
+
+.theme-border-brand {
+  @apply border-brand-300 dark:border-brand-400;
+}
+
+.theme-border-brand-solid {
+  @apply border-brand-600 dark:border-brand-500;
+}
+
+.theme-border-brand-solid-alt {
+  @apply border-brand-600 dark:border-grayDark-700;
+}
+
+/* * FOREGROUND */
+.theme-fg-primary {
+  @apply bg-grayLight-900 dark:bg-white;
+}
+
+.theme-fg-secondary {
+  @apply bg-grayLight-700 dark:bg-grayDark-300;
+}
+
+.theme-fg-secondary:hover {
+  @apply bg-grayLight-800 dark:bg-grayDark-200;
+}
+
+.theme-fg-tertiary {
+  @apply bg-grayLight-600 dark:bg-grayDark-400;
+}
+
+.theme-fg-tertiary:hover {
+  @apply bg-grayLight-700 dark:bg-grayDark-300;
+}
+
+.theme-fg-white {
+  @apply bg-white;
+}
+
+.theme-fg-disabled {
+  @apply bg-grayLight-400 dark:bg-grayDark-500;
+}
+
+.theme-fg-disabled-subtle {
+  @apply bg-grayLight-300 dark:bg-grayDark-600;
+}
+
+.theme-fg-brand-primary {
+  @apply bg-brand-600 dark:bg-brand-500;
+}
+
+.theme-fg-brand-secondary {
+  @apply bg-brand-500;
+}
+
+.theme-fg-brand-primary-alt {
+  @apply bg-brand-600 dark:bg-grayDark-300;
+}
+
+/* * BACKGROUND */
+.theme-bg-primary {
+  @apply bg-white dark:bg-grayDark-950;
+}
+
+.theme-bg-primary-alt {
+  @apply bg-white dark:bg-[bg-secondary];
+}
+
+/* .theme-bg-primary:hover {
+  @apply bg-grayLight-50 dark:bg-grayDark-800;
+} */
+
+.theme-bg-secondary {
+  @apply bg-grayLight-50 dark:bg-grayDark-900;
+}
+
+.theme-bg-secondary-alt {
+  @apply bg-grayLight-50 dark:bg-[bg-secondary];
+}
+
+.theme-bg-secondary:hover {
+    @apply bg-grayLight-100 dark:bg-grayDark-800;
+}
+
+.theme-bg-secondary-subtle {
+    @apply bg-grayLight-25 dark:bg-grayDark-900;
+}
+
+.theme-bg-secondary-solid {
+    @apply bg-grayLight-600 dark:bg-grayDark-600;
+}
+
+.theme-bg-tertiary {
+    @apply bg-grayLight-100 dark:bg-grayDark-800;
+}
+
+.theme-bg-active {
+    @apply bg-grayLight-50 dark:bg-grayDark-800;
+}
+
+.theme-bg-disabled {
+    @apply bg-grayLight-100 dark:bg-grayDark-800;
+}
+
+.theme-bg-disabled-subtle {
+    @apply bg-grayLight-50 dark:bg-grayDark-900;
+}
+
+.theme-bg-overlay {
+    @apply bg-grayLight-950 dark:bg-grayDark-800;
+}
+
+.theme-bg-brand-primary {
+    @apply bg-brand-50 dark:bg-brand-500;
+}
+
+.theme-bg-brand-primary-alt {
+    @apply bg-brand-500 dark:bg-[bg-secondary];
+}
+
+.theme-bg-brand-secondary {
+    @apply bg-brand-100 dark:bg-brand-600;
+}
+
+.theme-bg-brand-solid {
+    @apply bg-brand-600 dark:bg-brand-600;
+}
+
+.theme-bg-brand-solid:hover {
+    @apply bg-brand-700 dark:bg-brand-500;
+}
+
+.theme-bg-brand-section {
+    @apply bg-brand-800 dark:bg-[bg-secondary];
+}
+
+.theme-bg-brand-section-subtle {
+    @apply bg-brand-700 dark:bg-[bg-secondary];
+}
